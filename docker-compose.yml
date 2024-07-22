@@ -1,0 +1,9 @@
+services:
+  auth-service:
+    image: auth-server-0.0.1
+    hostname: "auth_service"
+    build:
+      context: ./auth-server
+      dockerfile: Dockerfile
+    ports:
+      - "9001:9001"
