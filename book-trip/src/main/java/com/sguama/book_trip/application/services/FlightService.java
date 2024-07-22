@@ -1,8 +1,7 @@
 package com.sguama.book_trip.application.services;
 
 import com.sguama.book_trip.application.interfaces.IFlightRepository;
-import com.sguama.book_trip.infrastructure.entity.FlightEntity;
-import com.sguama.book_trip.web.controllers.FlightController;
+import com.sguama.book_trip.infrastructure.entities.FlightEntity;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

@@ -1,7 +1,7 @@
 package com.sguama.book_trip.application.interfaces;
 
 import com.sguama.book_trip.domain.model.Flight;
-import com.sguama.book_trip.infrastructure.entity.FlightEntity;
+import com.sguama.book_trip.infrastructure.entities.FlightEntity;
 
 import java.util.List;
 

@@ -7,9 +7,9 @@ import com.sguama.book_trip.application.interfaces.IPaymentRepository;
 import com.sguama.book_trip.application.util.ResourceNotFoundException;
 import com.sguama.book_trip.domain.model.Booking;
 import com.sguama.book_trip.domain.model.Flight;
-import com.sguama.book_trip.infrastructure.entity.BookingEntity;
-import com.sguama.book_trip.infrastructure.entity.NotificationEntity;
-import com.sguama.book_trip.infrastructure.entity.PaymentEntity;
+import com.sguama.book_trip.infrastructure.entities.BookingEntity;
+import com.sguama.book_trip.infrastructure.entities.NotificationEntity;
+import com.sguama.book_trip.infrastructure.entities.PaymentEntity;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Component;
 

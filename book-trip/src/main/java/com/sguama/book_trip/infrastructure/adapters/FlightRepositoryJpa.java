@@ -2,8 +2,8 @@ package com.sguama.book_trip.infrastructure.adapters;
 
 import com.sguama.book_trip.application.interfaces.IFlightRepository;
 import com.sguama.book_trip.domain.model.Flight;
-import com.sguama.book_trip.infrastructure.entity.FlightEntity;
-import com.sguama.book_trip.infrastructure.entity.mappers.FlightMapper;
+import com.sguama.book_trip.infrastructure.entities.FlightEntity;
+import com.sguama.book_trip.infrastructure.entities.mappers.FlightMapper;
 import com.sguama.book_trip.infrastructure.respositories.FlightJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;

@@ -2,8 +2,8 @@ package com.sguama.book_trip.infrastructure.adapters;
 
 import com.sguama.book_trip.application.interfaces.IBookingRepository;
 import com.sguama.book_trip.domain.model.Booking;
-import com.sguama.book_trip.infrastructure.entity.BookingEntity;
-import com.sguama.book_trip.infrastructure.entity.mappers.BookingMapper;
+import com.sguama.book_trip.infrastructure.entities.BookingEntity;
+import com.sguama.book_trip.infrastructure.entities.mappers.BookingMapper;
 import com.sguama.book_trip.infrastructure.respositories.BookingJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;

@@ -2,7 +2,7 @@ package com.sguama.book_trip.web.controllers;
 
 import com.sguama.book_trip.application.services.PaymentConfirmationService;
 import com.sguama.book_trip.domain.usecases.UpdateBookingService;
-import com.sguama.book_trip.infrastructure.entity.PaymentEntity;
+import com.sguama.book_trip.infrastructure.entities.PaymentEntity;
 import com.sguama.book_trip.web.dto.BookingConfirmation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

@@ -3,7 +3,6 @@ package com.sguama.book_trip.web.controllers;
 import com.sguama.book_trip.domain.model.Booking;
 import com.sguama.book_trip.domain.usecases.BookingFlightService;
 import com.sguama.book_trip.domain.usecases.UpdateBookingService;
-import com.sguama.book_trip.infrastructure.entity.FlightEntity;
 import com.sguama.book_trip.web.dto.BookingRequest;
 import com.sguama.book_trip.web.dto.BookingUpdate;
 import org.springframework.beans.factory.annotation.Autowired;

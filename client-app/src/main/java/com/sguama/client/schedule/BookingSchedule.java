@@ -16,7 +16,6 @@ public class BookingSchedule {
         this.mail = mail;
     }
 
-    @Scheduled(cron = "0 * * * * MON-SUN")
     public void generateReminderFlights() {
         mail.sendEmail("r_d58@hotmail.com", "Notificaciones Test", "No respoder este mensaje");
     }

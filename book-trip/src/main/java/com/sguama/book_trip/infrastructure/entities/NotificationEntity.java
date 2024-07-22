@@ -1,6 +1,5 @@
-package com.sguama.book_trip.infrastructure.entity;
+package com.sguama.book_trip.infrastructure.entities;
 
-import com.sguama.book_trip.domain.model.Booking;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

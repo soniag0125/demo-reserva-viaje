@@ -1,8 +1,8 @@
-package com.sguama.book_trip.infrastructure.entity.mappers;
+package com.sguama.book_trip.infrastructure.entities.mappers;
 
 import com.sguama.book_trip.domain.model.Booking;
-import com.sguama.book_trip.infrastructure.entity.BookingEntity;
-import com.sguama.book_trip.infrastructure.entity.FlightEntity;
+import com.sguama.book_trip.infrastructure.entities.BookingEntity;
+import com.sguama.book_trip.infrastructure.entities.FlightEntity;
 
 public class BookingMapper {
 

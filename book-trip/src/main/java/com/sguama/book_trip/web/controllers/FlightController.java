@@ -1,8 +1,7 @@
 package com.sguama.book_trip.web.controllers;
 
 import com.sguama.book_trip.application.services.FlightService;
-import com.sguama.book_trip.domain.model.Booking;
-import com.sguama.book_trip.infrastructure.entity.FlightEntity;
+import com.sguama.book_trip.infrastructure.entities.FlightEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
