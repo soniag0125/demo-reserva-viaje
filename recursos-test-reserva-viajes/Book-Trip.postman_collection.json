@@ -1,0 +1,395 @@
+{
+	"info": {
+		"_postman_id": "234a1dc3-fd02-4f07-a71e-5963091163ac",
+		"name": "Book-Trip",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Booking",
+			"item": [
+				{
+					"name": "create-booking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"flightId\":\"1\",\r\n    \"userName\":\"Sonia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/booking/create/v1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"booking",
+								"create",
+								"v1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-booking",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"flightId\":\"2\",\r\n    \"bookingId\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/booking/update/v1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"booking",
+								"update",
+								"v1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "confirmed-booking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookingId\": 1,\r\n    \"amount\": 100,\r\n    \"mail\": \"soniag0125@hotmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/payment/booking/v1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"payment",
+								"booking",
+								"v1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Flight",
+					"item": [
+						{
+							"name": "create-flights",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"origin\":\"Quito\",\r\n  \"destination\":\"Guayaquil\",\r\n  \"capacity\":\"10\",\r\n  \"departureTime\":\"2024-07-03T10:15:30\",\r\n  \"arrivalTime\":\"2024-07-03T11:45:30\",\r\n  \"price\":100,\r\n  \"status\":\"ACTIVE\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/flights/admin/create/v1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"flights",
+										"admin",
+										"create",
+										"v1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list-flights",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/flights/list/v1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"flights",
+										"list",
+										"v1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Booking",
+					"item": [
+						{
+							"name": "list-booking",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/booking/list/v1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"booking",
+										"list",
+										"v1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "generar-codigo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "JSESSIONID=ABC249CD586DED2A8361F5D9949B603E"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "sonia",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "sonia##11",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9001/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9001",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "generar-token",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "sonia##11",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "client-app",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic Y2xpZW50LWFwcDpzb25pYSMjMTE="
+							},
+							{
+								"key": "Cookie",
+								"value": "JSESSIONID=ABC249CD586DED2A8361F5D9949B603E"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "code",
+									"value": "nB6U94-v8GlbvtAk4_xtwzoAy1pIAURASfWfvQ-AiIxgSQAl-lb79ePedwfi3r7iqCTx4FmeuNuaDt-UONFDtt4p9SZmtZi6tsPCFH4o3QPr7iNFysMhNyS_OwbblX_Z",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code",
+									"type": "text"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "http://127.0.0.1:8580/authorized",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "127.0.0.1:9001/oauth2/token",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9001",
+							"path": [
+								"oauth2",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-booking-mock-ok",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJraWQiOiIzOTJlZWU5MC1lZWE2LTRhMjQtYjQ3Zi01ZDE0NDBlYTllMGMiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJzb25pYSIsImF1ZCI6ImNsaWVudC1hcHAiLCJuYmYiOjE3MjE2OTAwMzksInNjb3BlIjpbInJlYWQiLCJvcGVuaWQiLCJwcm9maWxlIl0sImlzcyI6Imh0dHA6Ly8xMjcuMC4wLjE6OTAwMSIsImV4cCI6MTcyMTY5MDMzOSwiaWF0IjoxNzIxNjkwMDM5LCJqdGkiOiIyMzAyY2U1Yy02OWJkLTQ5ZTEtOGNiOC1hZDc2MzRhN2YzMzMifQ.XGLvjJvFG1IiriBU0y7Tw3fGaHocxxNZLs4jlpuqb8KXzjv6hD3vACHNKRS2IsnY_B05F8N92wxvqW_g7dmm7yJ_sXwJ_Fb9PuInaXzike0HCDPtGtFajGtuiPZmnUEe4xpbKDmlHmBlwj2QFMS9SO_RTYY0VAgAN8a_5CG5rNulk_z1ruFxedOJd-nYowWuX77WDH5Hw26O1N3wIWvu6smMYoT5s9WzIRdESJTkQAQnZAh5nwtRplB4nx6wrLV0gv38zm1PriLfrE55GZnG-OGgyXWEEiuPFlHwnBJwE_S8xMEQzby71f451gMQNfLazryQZ8QdX7FIIG8Aq6bb_A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJraWQiOiIwMzZjZjdhMi00NWMyLTQ3ZjMtYmE1NS1jYTcyNjQ1MWU0MWQiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJzb25pYSIsImF1ZCI6ImNsaWVudC1hcHAiLCJuYmYiOjE3MjE2MjA4OTUsInNjb3BlIjpbInJlYWQiLCJvcGVuaWQiLCJwcm9maWxlIl0sImlzcyI6Imh0dHA6Ly8xMjcuMC4wLjE6OTAwMSIsImV4cCI6MTcyMTYyMTE5NSwiaWF0IjoxNzIxNjIwODk1LCJqdGkiOiJmMDljOTQzYi04MGE4LTQ2NWItOGY3Ny1hMmZjZWUwY2ViZTcifQ.R2ioOSiflTDKklpieJkbfGwyaN1kBBsShuYktlnO8ah6xEmzbi5BK_wzs6iDi54L4aVOFTx07lxahRsQGzsHDFPyI__rcItlRiEtgMuanjYo_W282YWgTkwsiRfVPKAVWrqOlDc9CdbZKreYCj6X2TVVlLklHz8f2nastEGJr1mps_FBHu6QQkIxlKA_59MxuaYeTEKJJ2W5Iq4ND2GpkZleddzwJbr6Vzk2T5aAiYLMxpMGeHXlTB14LK4oHdnnm0agOcPQWb9fo5VtXN3Zb-x8fNUfGTJNtOIPH7GolYmMOOPIXPD-fPfpiSYGe86vA635uP_fba1MeR-Vh6p0IA"
+							},
+							{
+								"key": "Cookie",
+								"value": "JSESSIONID=ABC249CD586DED2A8361F5D9949B603E"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"flightId\":\"1\",\n    \"userName\":\"Sonia\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8580/api/booking/create/v1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8580",
+							"path": [
+								"api",
+								"booking",
+								"create",
+								"v1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-flights-mock-auth-error",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"origin\":\"Quito\",\r\n  \"destination\":\"Guayaquil\",\r\n  \"capacity\":\"10\",\r\n  \"departureTime\":\"2024-07-03T10:15:30\",\r\n  \"arrivalTime\":\"2024-07-03T11:45:30\",\r\n  \"price\":100,\r\n  \"status\":\"ACTIVE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8580/api/flights/admin/create/v1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8580",
+							"path": [
+								"api",
+								"flights",
+								"admin",
+								"create",
+								"v1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
